@@ -7,17 +7,27 @@
 }
 
 :root {
-  --almost-white: #FFFDFA;
-  --dark-blue: #00001A;
-  --gunmetal: #5E607A;
-  --vermillion: #F15D51;
-  --yellow: #E9AA52;
-  --silver: #C5C6CE;
+  --almost-white: #fffdfa;
+  --dark-blue: #00001a;
+  --gunmetal: #5e607a;
+  --vermillion: #f15d51;
+  --yellow: #e9aa52;
+  --silver: #c5c6ce;
 }
 
 body {
   padding: 1.75rem 1rem;
   background-color: var(--almost-white);
+}
+
+body.menu-open::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 26, 0.5);
 }
 
 .header-mobile {
@@ -30,6 +40,34 @@ body {
 .header-mobile button {
   border: none;
   background: none;
+  width: fit-content;
+}
+
+.header-mobile nav {
+  position: fixed;
+  background-color: var(--almost-white);
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 16rem;
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+.header-mobile nav button {
+  align-self: flex-end;
+  margin-bottom: 4rem;
+}
+
+.header-mobile nav a {
+  text-decoration: none;
+  color: var(--dark-blue);
+  font-size: 1.125rem;
+  line-height: 1.5rem;
 }
 
 .primeira-secao {
